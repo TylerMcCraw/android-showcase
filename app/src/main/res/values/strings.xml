@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">android-showcase</string>
+    <string name="app_name">Udacity Android Portfolio</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

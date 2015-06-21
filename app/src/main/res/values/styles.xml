@@ -1,8 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Material">
         <!-- Customize your theme here. -->
     </style>
 
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="statusbar">#0097A7</color>
+    <color name="background">#00BCD4</color>
 </resources>
