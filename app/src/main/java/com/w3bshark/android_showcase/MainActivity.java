@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private void initializeData(){
         applications = new ArrayList<>();
         applications.add(new Application(getString(R.string.app_spotify_streamer), getString(R.string.descr_spotify_streamer), R.drawable.spotify));
-        applications.add(new Application(getString(R.string.app_scores), getString(R.string.descr_scores), R.drawable.spotify));
-        applications.add(new Application(getString(R.string.app_library), getString(R.string.descr_library), R.drawable.spotify));
-        applications.add(new Application(getString(R.string.app_build_it_bigger), getString(R.string.descr_build_it_bigger), R.drawable.spotify));
-        applications.add(new Application(getString(R.string.app_xyz_reader), getString(R.string.descr_xyz_reader), R.drawable.spotify));
-        applications.add(new Application(getString(R.string.app_capstone), getString(R.string.descr_capstone), R.drawable.spotify));
+        applications.add(new Application(getString(R.string.app_scores), getString(R.string.descr_scores), R.drawable.ic_assessment_black_48dp));
+        applications.add(new Application(getString(R.string.app_library), getString(R.string.descr_library), R.drawable.ic_book_black_48dp));
+        applications.add(new Application(getString(R.string.app_build_it_bigger), getString(R.string.descr_build_it_bigger), R.drawable.ic_cloud_black_48dp));
+        applications.add(new Application(getString(R.string.app_xyz_reader), getString(R.string.descr_xyz_reader), R.drawable.ic_chrome_reader_mode_black_48dp));
+        applications.add(new Application(getString(R.string.app_capstone), getString(R.string.descr_capstone), R.drawable.ic_android_black_48dp));
     }
 
     private void initializeAdapter(){
