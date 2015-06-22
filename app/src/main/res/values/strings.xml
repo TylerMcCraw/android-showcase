@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Udacity Android Portfolio</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="project1">Spotify Streamer</string>
+    <string name="project2">Scores App</string>
 </resources>

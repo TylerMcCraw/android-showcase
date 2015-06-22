@@ -1,24 +1,52 @@
 package com.w3bshark.android_showcase;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private List<Application> applications;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Window window = this.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.statusbar));
+        mRecyclerView = (RecyclerView) findViewById(R.id.rv);
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        mRecyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        initializeData();
+        initializeAdapter();
+    }
+
+    private void initializeData(){
+        applications = new ArrayList<>();
+        applications.add(new Application(getString(R.string.project1), "Description Goes Here", R.drawable.spotify));
+        applications.add(new Application(getString(R.string.project2), "Description Goes Here", R.drawable.spotify));
+        applications.add(new Application("Library App", "Description Goes Here", R.drawable.spotify));
+    }
+
+    private void initializeAdapter(){
+        RecyclerAdapter adapter = new RecyclerAdapter(applications);
+        mRecyclerView.setAdapter(adapter);
     }
 
     @Override

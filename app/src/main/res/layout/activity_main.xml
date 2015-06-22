@@ -1,100 +1,169 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#00BCD4">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="16dp"
+    >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <android.support.v7.widget.RecyclerView
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_width="match_parent"
+        android:id="@+id/rv"
+        >
+    </android.support.v7.widget.RecyclerView>
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollView"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" >
+</LinearLayout>
 
-        </ScrollView>
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--tools:context=".MainActivity">-->
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Spotify Streamer"
-            android:id="@+id/button"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:background="#FFFFFF"
-            android:textColor="#000000" />
+    <!--&lt;!&ndash;<ScrollView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/scrollView"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentBottom="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentStart="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentEnd="true" >&ndash;&gt;-->
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Scores App"
-            android:id="@+id/button2"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/button"
-            android:layout_centerHorizontal="true"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:background="#FFFFFF"
-            android:textColor="#000000" />
+    <!--&lt;!&ndash;</ScrollView>&ndash;&gt;-->
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Library App"
-            android:id="@+id/button3"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/button2"
-            android:layout_centerHorizontal="true"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:background="#FFFFFF"
-            android:textColor="#000000" />
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/card_view1"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--style="@style/CardViewStyle">-->
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Build It Bigger"
-            android:id="@+id/button4"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/button3"
-            android:layout_centerHorizontal="true"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:background="#FFFFFF"
-            android:textColor="#000000" />
+        <!--<ImageView-->
+            <!--android:layout_width="128dp"-->
+            <!--android:layout_height="128dp"-->
+            <!--android:id="@+id/project1_photo"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--android:src="@drawable/spotify"-->
+            <!--/>-->
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="XYZ Reader"
-            android:id="@+id/button5"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/button4"
-            android:layout_centerHorizontal="true"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:background="#FFFFFF"
-            android:textColor="#000000" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/info_text1"-->
+            <!--android:layout_toEndOf="@+id/project1_photo"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_marginStart="20dp"-->
+            <!--android:textSize="30sp"-->
+            <!--android:text="@string/project1"-->
+            <!--/>-->
 
-        <Button
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="Capstone: My Own App"
-            android:id="@+id/button6"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/button5"
-            android:layout_centerHorizontal="true"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:background="#FFFFFF"
-            android:textColor="#000000" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/info_subtext1"-->
+            <!--android:layout_toEndOf="@+id/project1_photo"-->
+            <!--android:layout_below="@+id/info_text1"-->
+            <!--/>-->
+    <!--</android.support.v7.widget.CardView>-->
 
-    </RelativeLayout>
-</RelativeLayout>
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/card_view2"-->
+        <!--android:layout_below="@id/card_view1"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--style="@style/CardViewStyle">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/project2_photo"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/info_text2"-->
+            <!--android:layout_toEndOf="@+id/project2_photo"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:textSize="30sp"-->
+            <!--android:text="@string/project2"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/info_subtext2"-->
+            <!--android:layout_toEndOf="@+id/project2_photo"-->
+            <!--android:layout_below="@+id/info_text2"-->
+            <!--/>-->
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--<Button-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/project1"-->
+    <!--android:id="@+id/button"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:background="@color/button_material_dark" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/project2"-->
+    <!--android:id="@+id/button2"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_below="@+id/button"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/button_material_dark" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Library App"-->
+    <!--android:id="@+id/button3"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_below="@+id/button2"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/button_material_dark" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Build It Bigger"-->
+    <!--android:id="@+id/button4"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_below="@+id/button3"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/button_material_dark" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="XYZ Reader"-->
+    <!--android:id="@+id/button5"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_below="@+id/button4"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/button_material_dark" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="250dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Capstone: My Own App"-->
+    <!--android:id="@+id/button6"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_below="@+id/button5"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@color/button_material_dark" />-->
+
+<!--</RelativeLayout>-->
