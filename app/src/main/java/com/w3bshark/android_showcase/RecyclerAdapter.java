@@ -14,6 +14,7 @@ import java.util.List;
  * Created by tmccraw on 6/21/2015.
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ApplicationViewHolder> {
+    
     public static class ApplicationViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView appName;
@@ -31,14 +32,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Applic
 
     List<Application> applications;
 
-    RecyclerAdapter(List<Application> persons){
-        this.applications = persons;
+    RecyclerAdapter(List<Application> applications){
+        this.applications = applications;
     }
-
-//    @Override
-//    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
-//        super.onAttachedToRecyclerView(recyclerView);
-//    }
 
     @Override
     public ApplicationViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {

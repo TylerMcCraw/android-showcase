@@ -39,9 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeData(){
         applications = new ArrayList<>();
-        applications.add(new Application(getString(R.string.project1), "Description Goes Here", R.drawable.spotify));
-        applications.add(new Application(getString(R.string.project2), "Description Goes Here", R.drawable.spotify));
-        applications.add(new Application("Library App", "Description Goes Here", R.drawable.spotify));
+        applications.add(new Application(getString(R.string.app_spotify_streamer), getString(R.string.descr_spotify_streamer), R.drawable.spotify));
+        applications.add(new Application(getString(R.string.app_scores), getString(R.string.descr_scores), R.drawable.spotify));
+        applications.add(new Application(getString(R.string.app_library), getString(R.string.descr_library), R.drawable.spotify));
+        applications.add(new Application(getString(R.string.app_build_it_bigger), getString(R.string.descr_build_it_bigger), R.drawable.spotify));
+        applications.add(new Application(getString(R.string.app_xyz_reader), getString(R.string.descr_xyz_reader), R.drawable.spotify));
+        applications.add(new Application(getString(R.string.app_capstone), getString(R.string.descr_capstone), R.drawable.spotify));
     }
 
     private void initializeAdapter(){
