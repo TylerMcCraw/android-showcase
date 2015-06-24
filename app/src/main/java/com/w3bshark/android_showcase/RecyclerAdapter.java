@@ -21,6 +21,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Applic
         TextView appDescription;
         ImageView appPhoto;
 
+
         ApplicationViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
@@ -31,24 +32,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Applic
     }
 
     List<Application> applications;
+    View.OnClickListener clickListener;
 
-    RecyclerAdapter(List<Application> applications){
+    RecyclerAdapter(List<Application> applications, View.OnClickListener clickListener) {
         this.applications = applications;
+        this.clickListener = clickListener;
     }
 
     @Override
     public ApplicationViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_item, viewGroup, false);
-        ApplicationViewHolder pvh = new ApplicationViewHolder(v);
-        return pvh;
+        return new ApplicationViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(ApplicationViewHolder applicationViewHolder, int i) {
+        applicationViewHolder.cv.setTag(applications.get(i).appId);
         applicationViewHolder.appName.setText(applications.get(i).name);
         applicationViewHolder.appDescription.setText(applications.get(i).description);
         applicationViewHolder.appPhoto.setImageResource(applications.get(i).photoId);
         applicationViewHolder.appPhoto.setContentDescription(applicationViewHolder.appDescription.getText());
+        applicationViewHolder.cv.setOnClickListener(clickListener);
     }
 
     @Override
