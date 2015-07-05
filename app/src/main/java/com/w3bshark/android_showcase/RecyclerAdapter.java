@@ -11,7 +11,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by tmccraw on 6/21/2015.
+ * Created by w3bshark on 6/21/2015.
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ApplicationViewHolder> {
 

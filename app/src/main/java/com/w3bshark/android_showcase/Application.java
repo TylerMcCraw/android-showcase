@@ -1,7 +1,7 @@
 package com.w3bshark.android_showcase;
 
 /**
- * Created by tmccraw on 6/21/2015.
+ * Created by w3bshark on 6/21/2015.
  */
 public class Application {
     int appId;
